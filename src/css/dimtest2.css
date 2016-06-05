@@ -1,0 +1,58 @@
+/* Testing autoprefixer */
+
+.autoprefixer {
+  display: flex;
+}
+
+/* Testing cssnext */
+
+.cssnext {
+  background: color(red alpha(-10%));
+}
+
+/* Testing precss */
+
+.precss {
+  @if 3 < 5 {
+    background: green;
+  }
+  @else {
+    background: blue;
+  }
+}
+
+/* Testing postcss-color-rgba-fallback*/
+
+.rgbaFallback {
+    background: rgba(0,0,0,0.5);
+}
+
+/* Testing postcss-opacity*/
+
+.opacityFallback {
+    opacity: 0.5;
+}
+
+/* Testing postcss-pseudoelements*/
+
+.pseudo-element::before {
+    content: '';
+}
+
+/* Testing postcss-vmin*/
+
+.vmFallback {
+    width: 50vmin;
+}
+
+/* Testing pixrem*/
+
+.remFallback {
+    height: 10rem;
+    font: 2rem Arial;
+}
+
+.remFallback::before {
+    content: '';
+    line-height: 1rem;
+}

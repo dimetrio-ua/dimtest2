@@ -1,0 +1,62 @@
+/* Testing autoprefixer */
+
+.autoprefixer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Testing cssnext */
+
+.cssnext {
+  background: #ff0000;
+  background: rgba(255, 0, 0, 0.9);
+}
+
+/* Testing precss */
+
+.precss {
+  background: green
+}
+
+/* Testing postcss-color-rgba-fallback*/
+
+.rgbaFallback {
+    background: #000000;
+    background: rgba(0,0,0,0.5);
+}
+
+/* Testing postcss-opacity*/
+
+.opacityFallback {
+    opacity: 0.5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+/* Testing postcss-pseudoelements*/
+
+.pseudo-element:before {
+    content: '';
+}
+
+/* Testing postcss-vmin*/
+
+.vmFallback {
+    width: 50vm;
+    width: 50vmin;
+}
+
+/* Testing pixrem*/
+
+.remFallback {
+    height: 160px;
+    height: 10rem;
+    font: 32px Arial;
+    font: 2rem Arial;
+}
+
+.remFallback:before {
+    content: '';
+    line-height: 16px;
+    line-height: 1rem;
+}
