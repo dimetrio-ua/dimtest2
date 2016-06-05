@@ -1,3 +1,4 @@
+@import 'normalize.css/normalize.css';
 /* Testing autoprefixer */
 
 .autoprefixer {
@@ -55,4 +56,39 @@
 .remFallback::before {
     content: '';
     line-height: 1rem;
+}
+
+/* Testing css-mqpacker*/
+/* LAYOUT */
+
+.column {
+    width: 50%;
+    float: left;
+}
+
+@media (max-width: 50rem) {
+    .column {
+        width: 100%;
+        float: none;
+    }
+}
+
+/* VISUALS */
+
+.column_one, .column_two {
+    border: 0.0625rem solid #ccc;
+}
+
+.column_two {
+    border-left: 0;
+}
+
+@media (max-width: 50rem) {
+    .column_one, .column_two {
+        border: 0.0625rem solid #ccc;
+    }
+
+    .column_two {
+        border-top: 0;
+    }
 }
