@@ -10,6 +10,8 @@ var vmin = require('postcss-vmin');
 var pixrem = require('pixrem');
 var precss = require('precss');
 var cssnano = require('cssnano');
+var rename = require('gulp-rename');
+var browserSync = require('browser-sync');
 
 gulp.task('css', function () {
   var processors = [
@@ -24,7 +26,31 @@ gulp.task('css', function () {
     autoprefixer,
     cssnano
   ];
-  return gulp.src('./src/css/*.css')
+  return gulp.src('src/css/*.css')
     .pipe(postcss(processors))
-    .pipe(gulp.dest('./dest'));
+    .pipe(rename('style.css'))
+    .pipe(gulp.dest('dest'))
+    .pipe(browserSync.reload({stream:true}))
 });
+
+gulp.task('html', function() {
+    return gulp.src('src/html/**/*.html')
+        .pipe(rename('index.html'))
+        .pipe(gulp.dest('dest'))
+        .pipe(browserSync.reload({stream:true}))
+});
+
+gulp.task('watch', function () {
+   gulp.watch('src/css/*.css', ['css']);
+   gulp.watch('src/html/**/*.html', ['html']);
+});
+
+gulp.task('browser-sync', function() {
+  browserSync({
+    server: {
+      baseDir: "dest"
+    }
+  });
+});
+
+gulp.task('start', ['browser-sync', 'watch']);
