@@ -1,6 +1,90 @@
 @import 'normalize.css/normalize.css';
 
-.test {
-  color: yellow;
-  border: solid 2px black;
+body {
+  width:960px;
+  /*border:solid 1px black;*/
+  margin: auto;
+}
+
+header {
+  height: 108px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 19px;
+}
+
+.block {
+  background-color: grey;
+}
+
+.block-1 {
+  width: 122px;
+}
+
+.block-2 {
+  width: 279px;
+}
+
+.block-3 {
+  width: 513px;
+}
+
+.container {
+  height: 771px;
+  /*border: dotted 1px red;*/
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  width: 184px;
+  height: 771px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.block-4 {
+  height: 335px;
+}
+.block-7 {
+  height: 134px;
+}
+.main {
+  width:755px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-block {
+  background-color: lightgray;
+}
+.block-5 {
+  width:100%;
+  height: 210px;
+}
+.middle {
+  display: flex;
+  flex-wrap: wrap;
+}
+.block-6 {
+  width: 133px;
+  height: 152px;
+}
+.block-middle-2, .block-middle-3, .block-middle-4, .block-middle-5, .block-middle-7 {
+  margin-left: 22px;
+}
+
+.block-middle-6, .block-middle-7 {
+  margin-top: 19px;
+}
+.bottom {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.block-8, .block-9 {
+  width: 368px;
 }
